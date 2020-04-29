@@ -33,11 +33,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <h1>GitHub Profile Picture Finder</h1>
+        <h4>GIT USERNAME:</h4>
         <input onChange={(event) => setUserName(event.target.value)} />
         <button onClick={() => handleGithubUser()}>CLICK</button>
         {/* {loading ? <span>loading...</span> : null} */}
         {loading && <span>loading...</span>}
+        <br />
         <img className={"img"} src={user.avatar_url} />
+        <br />
         <span>{user.login}</span>
       </header>
     </div>
